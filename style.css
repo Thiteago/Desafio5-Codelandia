@@ -1,5 +1,170 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face{
+    font-family: PoppinsBold;
+    src: url(fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: PoppinsRegular;
+    src: url(fonts/Poppins-Regular.ttf);
+}
+
+
 body{
     background-image: linear-gradient(#628E75, #1A4855);
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
+
+}
+
+a{
+    text-decoration: none;
+    font-family: PoppinsRegular;
+}
+
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 165px 0 165px;
+}
+
+.logo-ghibli{
+    width: 150px;
+    height: 68px;
+}
+
+.wrapper-social{
+    display: flex;
+    gap: 30px;
+}
+
+.wrapper-social img{
+    width: 24px;
+    height: 24px;
+}
+
+.container-text{
+    width: 445px;
+    padding-top: 76px;
+    padding-left: 165px;
+}
+
+.container-text h2{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.container-text h1{
+    padding-top: 14px;
+    padding-bottom: 25px;
+    font-size: 68px;
+    font-weight: 900;
+}
+
+.container-text p{
+    font-family: PoppinsRegular;
+    font-size: 16px;
+    font-weight: 150;
+    line-height: 180%;
+    color: #F9F9F9;
+    padding-bottom: 46px;
+}
+
+.container-text h2,h1{
+    font-family: PoppinsBold;
+    color: #F9F9F9;
+}
+
+.main-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.wrapper-buttons{
+    display: flex;
+}
+
+.filled{
+    background-color: #628E75;
+    position: relative;
+}
+
+.outline{
+    background-color: transparent;
+    border: 2px solid #628E75;
+}
+
+.btn{
+    display: inline-block;
+    padding: 16px 42px;
+    color: #F9F9F9;
+    transform: skew(-30deg);
+}
+
+.btn span{
+    display: inherit;
+    transform: skew(30deg);
+}
+
+
+.wrapper-buttons{
+    margin-top: 1.4rem;
+    display: flex;
+    gap: 2.4rem;
+}
+
+@media(max-width: 1200px){
+    .btn{
+        padding: 13px 32px;
+    }
 }
